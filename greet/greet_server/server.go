@@ -17,7 +17,7 @@ type server struct {
 // func (s *server) MethodName(ctx context.Context, req *pb.RequestType) (*pb.ResponseType, error)
 
 func (*server) Greet(ctx context.Context, req *greet.GreetRequest) (*greet.GreetResponse, error) {
-	fmt.Printf("greet hehehe %v\n", req.String())
+	fmt.Printf("greet %v\n", req.String())
 	fn := req.GetFirstName()
 	ln := req.GetLastName()
 
