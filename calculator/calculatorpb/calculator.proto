@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+package calculatorpb;
+
+option go_package = "github.com/NikeshSapkota01/learningGrpc/calculatorpb";
+
+// Enum for operations
+enum Operation {
+    ADD = 0;      // Addition (+)
+    SUBTRACT = 1; // Subtraction (-)
+    MULTIPLY = 2; // Multiplication (*)
+    DIVIDE = 3;   // Division (/)
+}
+
+message CalculatorRequest {
+  int32 first_digit = 1;
+  int32 second_digit = 2;
+  //   If not provided by the client, the field will default to 0, which
+  //   corresponds to ADD since it's the first item in the Operation enum.
+  Operation operation = 3;
+}
+
+message CalculatorResponse { int64 result = 1; }
+
+service CalculatorService {
+  rpc Calculate(CalculatorRequest) returns (CalculatorResponse);
+}
