@@ -1,4 +1,4 @@
-module example.com/grpc
+module github.com/NikeshSapkota01/learningGrpc
 
 go 1.23.6
 
