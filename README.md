@@ -27,3 +27,52 @@ go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 ```
 
+## 📖 Learn More About gRPC  
+
+### 🔹 Official gRPC Documentation  
+- [gRPC Core Concepts](https://grpc.io/docs/what-is-grpc/core-concepts/)  
+- [gRPC Quickstart Guide](https://grpc.io/docs/languages/)  
+- [gRPC Best Practices](https://grpc.io/docs/guides/performance/)  
+
+### 🔹 Video Tutorials 
+- [What is gRPC](<https://www.youtube.com/watch?v=hVrwuMnCtok>) 
+- [Introduction to RPC - Remote Procedure Calls](<https://www.youtube.com/watch?v=eRndYq8iTio>)  
+
+
+## How to Run the Project
+
+### Step 1: Clone the repository
+
+```bash
+git clone git@github.com:NikeshSapkota01/learningGrpc.git
+```
+
+### Step 2: Navigate to the project folder
+
+```bash
+cd learningGrpc
+```
+
+### Step 3: Tidy up the Go module
+
+```bash
+go mod tidy
+```
+
+### Step 4: Start the gRPC server
+
+```bash
+cd greet/greet_server
+go run server.go
+```
+
+### Step 5: Run the gRPC client in a new terminal window
+
+```bash
+cd greet/greet_client
+go run client.go
+```
+
+### Output(something like this)
+
+![alt text](image.png)
